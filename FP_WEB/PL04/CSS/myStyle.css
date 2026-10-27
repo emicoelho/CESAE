@@ -1,0 +1,26 @@
+body{
+    background-color: bisque;
+    margin: 20px;
+}
+
+.header{
+    text-align: center;
+    width: 50%;
+}
+
+.footer{
+    text-align: center;
+    background-color: grey;
+    padding: 5px;
+    margin: 10px;
+}
+
+nav{
+    background-color: grey;
+    padding: 5px;
+    margin: 10px;
+}
+
+p{
+    text-align: justify;
+}

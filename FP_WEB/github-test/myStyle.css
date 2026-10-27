@@ -1,0 +1,22 @@
+body {
+    background-image: url(https://www.nikkisplate.com/wp-content/uploads/2026/08/cute-watercolor-pumpkin-fall-desktop-wallpaper.jpg);
+}
+
+h1 {
+    color: darkolivegreen;
+    text-align: center;
+    border: 5px solid brown;
+    
+}
+
+h2 {
+    color: indianred;
+}
+
+h3 {
+    color: darkblue;
+}
+
+p {
+    color: maroon;
+}
