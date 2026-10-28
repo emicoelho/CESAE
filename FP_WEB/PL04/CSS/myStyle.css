@@ -1,26 +1,30 @@
 body{
-    background-color: bisque;
+    background-color: whitesmoke;
     margin: 20px;
 }
 
 .header{
-    text-align: center;
     width: 50%;
 }
 
-.footer{
+.logo{
     text-align: center;
-    background-color: grey;
+    img{
+        height: 150px;
+    }
+}
+
+.footer{
     padding: 5px;
     margin: 10px;
 }
 
 nav{
-    background-color: grey;
     padding: 5px;
     margin: 10px;
 }
 
 p{
     text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
