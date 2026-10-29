@@ -19,15 +19,16 @@ public class Ex08 {
         System.out.print("Digite a terceira nota: ");
         n3 = input.nextDouble();
 
-        //Calculo
-        media = (n1 * 0.25) + (n2 * 0.35) + (n3 * 0.4);
+        if (n1 >= 0 && n1 <= 20 && n2 >= 0 && n2 <= 20){
+            //Calculo
+            media = (n1 * 0.25) + (n2 * 0.35) + (n3 * 0.4);
 
-        //Condicionais
-        if (media > 9.5){
-            System.out.println("Sua media foi " + media + ". Voce esta aprovado.");
-        } else{
-            System.out.println("Sua media foi " + media + ". Voce esta reprovado.");
+            //Condicionais
+            if (media > 9.5) {
+                System.out.println("Sua media foi " + media + ". Voce esta aprovado.");
+            } else {
+                System.out.println("Sua media foi " + media + ". Voce esta reprovado.");
+            }
         }
-
     }
 }
