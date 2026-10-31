@@ -1,17 +1,228 @@
+/* CONFIGURAÇÕES GERAIS - Fontes, fundo e margens*/
 body{
     font-family: Arial;
     background-color: #f7f7f9;
+    margin: 0; /* Remove a margem */
 }
 
-.azul{
+
+
+/* CONTAINER E CABEÇALHO - Nome, navegação e links */
+.container,
+.presentation-text{
+    width: calc(100% - 80px); /* Define a largura com base na largura da tela */
+    max-width: 1000px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blue{
     color: #1d1148;
+    font-size: 30px;
 }
 
-.rosa{
+.pink{
+    color: #e40084;
+    font-size: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 10px; /* Espaçamento entre os links */
+}
+
+nav a{
+    text-decoration: none;
+    color: #1d1148;
+    font-size: 17px;
+    padding: 8px;
+}
+
+nav a:hover{
     color: #e40084;
 }
 
+
+
+/* APRESENTAÇÃO PRINCIPAL - Fundo roxo e texto branco */
 .presentation{
     background-color: #1d1148;
     color: white;
+    min-height: 250px; /* Define a altura mínima */
+    padding: 30px 0; /* Adiciona espaçamento interno */
+}
+
+.presentation-text{
+    text-align: center;
+}
+
+.slogan{
+    font-size: clamp(25px, 3vw, 40px); /* Ajusta o tamanho da fonte com base na largura da tela */
+}
+
+p{
+    font-size: 20px;
+    margin: 20px 0; /* 20px em cima e embaixo e 0 nos lados */
+}
+
+
+/* BOTÃO - Aparencia e interação */
+.button{
+    display: inline-block;
+    background-color: #e40084;
+    color: white;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    border: none; 
+}
+
+.button:hover{
+    color: #1d1148; 
+}
+
+button.button[type="submit"]{
+    width: 120px;
+    height: 45px;
+}
+
+
+/* CARDS - Aparência e posicionamento */
+.animais{  
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-img{
+    width: 275px;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.card{
+    border-radius: 15px;
+    text-align: center;
+    border: 3.5px solid #1d1148;  
+    padding: 9.5px; 
+    width: 300px;
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+}
+
+
+
+/*TITULOS SECUNDARIOS*/
+h2{
+    color: #1d1148;
+    font-size: 24px;
+    margin-top: 35px;
+}
+
+ol{
+    color: #1d1148;
+    font-size: 20px;
+    line-height: 2; /* Espaçamento entre linhas */
+    padding-left: 25px; 
+}
+
+/* Table */
+.table-container{
+    width: 100%;
+    overflow-x: auto;
+}
+
+table{
+    width: 500px;
+}
+
+table, th, td{
+    border: 1px solid rgb(211, 205, 205);
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+    padding: 15px;
+    color: #1d1148;
+}
+
+th{
+    background-color: #1d1148;
+    color: white;
+}
+
+.form-box{
+    width: 500px;
+    max-width: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 205, 205);
+    margin-top: 0;
+}
+
+select{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 15px;
+    color: #1d1148;
+    background-color: rgb(231, 229, 229) ;
+    border: 1px solid rgb(211, 205, 205);
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#fmessage{
+    height: 100px;
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 205, 205);
+    margin-top: 0;
+}
+
+label{
+    display: block;
+    font-size: 20px;
+    color: #1d1148;
+    font-weight: bold;
+    margin-bottom: 3px;    
+}
+
+/*Rodape configuracoes*/
+
+footer{
+    background-color: #1d1148;
+    min-height: 35px;
+    padding: 4px 0;   
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h3{
+    color: white;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
 }

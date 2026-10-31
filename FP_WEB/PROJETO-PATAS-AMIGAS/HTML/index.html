@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt"> <!--Linguagem do site-->
 <head>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <meta charset="UTF-8">
@@ -7,33 +7,129 @@
     <title>Patas Amigas</title>
 </head>
 <body>
-    <div class="container"></div>
-
-        <div class="header">
-            <thead>
-                <h1>
-                    <span class="azul">Patas</span>
-                    <span class="rosa">Amigas</span>
-                </h1>
-
-                <nav>
-                    <a href="animais.html">Animais</a>
-                    <a href="adotar.html">Adotar</a>
-                    <a href="visitar.html">Visitar</a>
-                    <a href="contato.html">Contato</a>
-                </nav>
-
-                <br>
-                <div class="presentation">
-                    <h2>Da uma casa a quem só precisa de carinho</h2>
-                    <p>Somos uma associação do Porto que acolhe cães, gatos e coelhos a espera de uma familia.</p>
-                </div>
-            </thead>
-        </div>
-
-    </div>
-
-
     
+    <header class="container header">
+       <h1>
+            <!--Cada palavra em uma cor diferente-->
+            <span class="blue">Patas</span> 
+            <span class="pink">Amigas</span>
+        </h1>
+
+        <nav>
+            <a href="animais.html">Animais</a>
+            <a href="adotar.html">Como adotar</a>
+            <a href="visitar.html">Visitar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--Apresentação principal-->
+        <section class="presentation">
+            <div class="presentation-text">
+                <p class="slogan">Da uma casa a quem só precisa de carinho</p>
+                <p>Somos uma associação do Porto que acolhe cães, gatos e coelhos a <br> espera de uma familia.</p>
+
+                <a href="animais.html" class="button">
+                    Conhecer os animais 
+                </a>
+            </div>
+        </section>
+
+        <!--Corpo-->
+        <section class="body">
+            <div class="container">
+                <h2>Animais para adoção</h2> <!--Título-->
+                <div class="animais">
+
+                    <div class="card">
+                        <img src="../IMAGES/cao.svg" class="card-img">
+                        <h1>Rex</h1>
+                        <p>Cão de 3 anos. Adora passear e brincar com a bola.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="../IMAGES/gato.svg" class="card-img">
+                        <h1>Mia</h1>
+                        <p>Gata, 2 anos. Tranquila, gosta de dormir ao sol.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="../IMAGES/coelho.svg" class="card-img">
+                        <h1>Tambor</h1>
+                        <p>Coelho, 1 ano. Curioso e muito meigo.</p>
+                    </div>
+
+                </div>
+
+                <h2>Como adotar</h2>
+                
+                <!--Lista-->
+                <ol>
+                    <li>Escolhe o animal que mais combina contigo.</li>
+                    <li>Preenche o formulário de contacto.</li> 
+                    <li>Visita-nos para o conheceres pessoalmente.</li>
+                    <li>Leva o teu novo amigo para casa.</li>
+                </ol>
+
+                <h2>Horário de visitas</h2>
+
+                <!--Box horario de visitas-->
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                        <tr>
+                            <td>Segunda a sexta</td>
+                            <td>14h00 as 18h00</td>
+                        </tr>
+                        <tr>
+                            <td>Sabado</td>
+                            <td>10h00 as 13h00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Encerrado</td>
+                        </tr>
+                    </table>    
+            </div>
+
+                <h2>Contacto</h2>
+
+                <!--Formulario-->
+                <div class="form-box">
+                    <form>
+                        <label for="fname">Nome:</label>
+                        <input type="text" id="fname" name="fname" required>
+                        <br>
+                        <label for="femail">Email</label>
+                        <input type="email" id="femail" name="femail" required>
+                        <br>
+                        <label for="fanimal">Animal</label>
+                        <select id="fanimal" name="fanimal">
+                            <option value="rex">Rex</option>
+                            <option value="mia">Mia</option>
+                            <option value="tambor">Tambor</option>
+                        </select><br>
+                        <label for="fmessage">Mensagem</label>
+                        <textarea id="fmessage" name="fmessage"></textarea>
+
+                        <button type="submit" class="button">Enviar</button>
+                    </form>
+
+                </div>             
+            </div>        
+        </section>
+    </main>    
+
+    <!--Rodape-->
+    <footer class="footer">
+        <div class="container">
+            <h3>© 2026 Patas Amigas, Rua das Flores, 123, Porto</h3>
+        </div>
+    </footer>    
 </body>
 </html>
