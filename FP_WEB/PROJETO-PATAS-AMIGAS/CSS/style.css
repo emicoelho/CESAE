@@ -117,6 +117,22 @@ button.button[type="submit"]{
     box-sizing: border-box; /* Inclui o padding e a borda na largura total */
 }
 
+.card-image{
+    position: relative;
+    display: inline-block;
+}
+
+.tag-new{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e40084;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 15px;   
+}
+
 
 
 /*TITULOS SECUNDARIOS*/
