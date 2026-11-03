@@ -6,7 +6,7 @@ public class Ex11 {
         Scanner input = new Scanner(System.in);
 
         //Declaração de variáveis
-        int limite, salto;
+        int limite, salto, cont=0;
 
         //Entrada
         System.out.println("Digite um valor limite: ");
@@ -15,8 +15,9 @@ public class Ex11 {
         System.out.println("Digite um valor de salto: ");
         salto = input.nextInt();
 
-        while (){
-
+        while (cont < limite){
+            System.out.println(cont);
+             cont = cont + salto;
         }
     }
 }
