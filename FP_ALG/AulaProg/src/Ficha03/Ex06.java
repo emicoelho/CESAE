@@ -7,7 +7,7 @@ public class Ex06 {
         Scanner input = new Scanner(System.in);
 
         //Declaração de variáveis
-        int n1, n2, cont = 0;
+        int n1, n2;
 
         //Entrada
         System.out.println("Insira um número: ");
@@ -17,11 +17,10 @@ public class Ex06 {
         n2 = input.nextInt();
 
         //Ciclo
-        cont = cont + n1;
 
-        while(cont >= n1 && cont <= n2){
-            System.out.println(cont);
-            cont = cont + 1;
+        while(n1 <= n2){
+            System.out.println(n1);
+            n1 = n1 + 1;
         }
     }
 }
