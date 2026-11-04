@@ -15,7 +15,7 @@ public class Ex11 {
         System.out.println("Digite um valor de salto: ");
         salto = input.nextInt();
 
-        while (cont < limite){
+        while (cont <= limite){
             System.out.println(cont);
              cont = cont + salto;
         }
