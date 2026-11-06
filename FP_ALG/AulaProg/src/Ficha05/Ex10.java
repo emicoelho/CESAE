@@ -11,6 +11,7 @@ public class Ex10 {
 
         //Declaração da matriz
         int [][] matriz = new int[3][5];
+        int pesquisa, cont = 0;
 
         //Entrada
         for (int i = 0; i < matriz.length; i++){
@@ -23,12 +24,24 @@ public class Ex10 {
         //Print da matriz
         for (int i = 0; i < matriz.length; i++){
             for (int a = 0; a < matriz[i].length; a++){
-                System.out.println(matriz[i][a] + " ");
+                System.out.print(matriz[i][a] + " ");
             }
             System.out.println();
         }
 
         //Pedir o valor que o usuário quer pesquisar
-        System.out.println("Número para pe");
+        System.out.println("Número para pesquisar");
+        pesquisa = input.nextInt();
+
+        //Pesquisa
+        for (int i = 0; i < matriz.length; i++){
+            for (int a = 0; a < matriz[i].length; a++){
+                if (matriz[i][a] == pesquisa){
+                    cont++;
+                }
+            }
+        }
+
+        System.out.println(cont);
     }
 }
