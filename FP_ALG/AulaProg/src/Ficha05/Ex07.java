@@ -19,17 +19,24 @@ public class Ex07 {
         }
 
         //Declaração após inserção
-        int aux = numero[0];
+        int aux = -1; //Truque pra iniciar por um par qualquer.
 
         //Descobrir o maior
         for (int i = 0; i < numero.length; i++){
-            if (aux < numero[i]) {
-                if(numero[i]%2 == 0) {
+            if(numero[i] % 2 == 0) {
+
+                if (aux == -1) { //Aux ainda é o -1
+                    aux = numero[i];
+                } else if (numero[i] > aux) {
                     aux = numero[i];
                 }
             }
         }
 
-        System.out.println(aux);
+        if (aux == -1){
+            System.out.println("Não há pares.");
+        }else {
+            System.out.println("Maior par: " + aux);
+        }
     }
 }

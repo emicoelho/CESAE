@@ -21,7 +21,6 @@ public class Ex01 {
         //Mostrar os números pela ordem
         for (int i = 0; i < 10; i++){
             System.out.println("Número (" + i +"):" + numeros[i]);
-
         }
     }
 }

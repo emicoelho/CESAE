@@ -10,6 +10,7 @@ public class Ex09 {
 
         //Declaração da matriz
         int[][] matriz = new int[5][5];
+        int somatorio = 0;
 
         //Entrada
         for (int i = 0; i < matriz.length; i++){
@@ -22,9 +23,10 @@ public class Ex09 {
         //Printar
         for (int i = 0; i < matriz.length; i++){
             for (int a = 0; a < matriz[i].length; a++){
-                System.out.print(matriz[i][a] + " ");
+                somatorio += matriz[i][a];
             }
-            System.out.println();
         }
+
+        System.out.println(somatorio);
     }
 }
