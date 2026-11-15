@@ -1,63 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT"> <!--Define o idioma da página como português de Portugal-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cesae viagens</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!--Linka os ícones do Bootstrap-->
 </head>
 <body>
-    <header class="container-fluid bg-dark p-0"> <!--header serve pra indicar ao navegador e outros recursos que aquele trecho de codigo representa o cabeçalho-->
+    <header class="container-fluid bg-dark p-0"> <!--indica ao navegador e outros recursos que aquele trecho de codigo representa o cabeçalho-->
 
         <!--Barra de navegação-->
+        <!--navbar-expand mantém a navegação expandida. Container centraliza e limita a largura do conteúdo. Flex-wrap permite que os elementos se reorganizem quando o espaço disponível é reduzido.-->
         <nav class="navbar navbar-dark bg-dark py-3">
             <div class="container px-2 px-sm-3 d-flex flex-wrap align-items-center justify-content-between"> <!--Define layout responsivo, ajustando o espaçamento com base no tamanho da tela-->
 
                 <div class="d-flex align-items-center flex-wrap">
+
+                    <!--Logo-->
                     <a class="navbar-brand fw-bold fs-6 me-2 me-sm-3 flex-shrink-0" href="#">
+
+                        <i class="bi bi-airplane text-white me-2"></i>
                         CESAE viagens
                     </a>
 
                     <ul class="navbar-nav flex-row flex-wrap my-1 my-md-0 gap-1 gap-sm-3"> <!--Define o layout responsivo, ajustando os itens com base no tamanho da tela-->
 
                         <li class="nav-item">
-                            <a class="nav-link px-1 fs-6 text-white" href="#">Início</a>
+                            <a class="nav-link px-1 fs-6 text-white" href="#início">Início</a>
                         </li>
 
                         <li class="nav-item dropdown position-relative"> <!--Identifica como menu dropdown-->
-                            <a class="nav-link dropdown-toggle px-1 fs-6 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle px-1 fs-6 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Destinos
                             </a>
 
                             <ul class="dropdown-menu dropdown-menu-dark position-absolute shadow">
-                                <li><a class="dropdown-item" href="#">Europa</a></li>
-                                <li><a class="dropdown-item" href="#">América do Norte</a></li>
-                                <li><a class="dropdown-item" href="#">América do Sul</a></li>
-                                <li><a class="dropdown-item" href="#">Ásia</a></li>
-                                <li><a class="dropdown-item" href="#">Oceania</a></li>
+                                <li><a class="dropdown-item" href="#espanha">Espanha</a></li>
+                                <li><a class="dropdown-item" href="#italia">Itália</a></li>
+                                <li><a class="dropdown-item" href="#inglaterra">Inglaterra</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link px-1 fs-6 text-white" href="#">Planos</a>
+                            <a class="nav-link px-1 fs-6 text-white" href="#planos">Planos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link px-1 fs-6 text-white" href="#">Perguntas</a>
+                            <a class="nav-link px-1 fs-6 text-white" href="#perguntas">Perguntas</a>
                         </li>
 
                     </ul>
                 </div>
 
                 <div class="flex-shrink-0 ms-auto ms-sm-0 mt-2 mt-sm-0">
-                    <a href="#" class="btn btn-warning btn-sm text-dark fw-bold px-2 px-sm-3">Reservar</a>
+                    <a href="#reservar" class="btn btn-warning btn-sm text-dark fw-bold px-2 px-sm-3">Reservar</a>
                 </div>
 
             </div>
         </nav>  
 
         <!--Banner principal-->
-        <section class="bg-dark text-center py-5">
+        <section id="início" class="bg-dark text-center py-5">
             <div class="container">
 
                 <h1 class="display-4 fw-bold text-white">
@@ -70,11 +74,11 @@
 
                 <div class="d-flex justify-content-center flex-wrap gap-2">
 
-                    <a href="#" class="btn btn-warning text-dark fw-bold">
+                    <a href="#planos" class="btn btn-warning text-dark fw-bold">
                         Ver planos
                     </a>
                     
-                    <a href="#" class="btn btn-dark text-white fw-bold border">
+                    <a href="#destinos" class="btn btn-dark text-white fw-bold border">
                         Ver destinos
                     </a>
                 
@@ -94,18 +98,19 @@
             </h2>
         
             <!--Cards com os beneficios-->
+            <!--Row-cols define quantas colunas aparecem em cada breakpoint. g-4 controla o espaçamento entre os cards. h-100 permite manter a mesma altura dentro da linha.-->
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-3"> <!--Define o layout responsivo dos cards, ajustando o número de colunas com base no tamanho da tela.-->
 
                 <!--Card 1-->
                 <div class="col">
-                    <div class="card border-0 h-100 shadow-sm">
+                    <div class="card border-0 h-100 ">
 
                         <div class="rounded-pill bg-primary-subtle px-3 py-4 d-inline-flex align-items-center justify-content-center mx-auto mb-3 mt-3">
-                            <img src="../IMAGES/geo-alt.svg" class="w-auto" alt="Destinos a medida" style="height: 24px;">
+                            <i class="bi bi-geo-alt "></i>
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Destinos a medida</h5>
+                            <h3 class="card-title fw-bold">Destinos a medida</h3>
                             <p class="card-text">Escolhemos o roteiro consigo, do primeiro cafe ao ultimo por do sol.</p>
                         </div>
                     </div>
@@ -113,14 +118,14 @@
 
                 <!--Card 2-->
                 <div class="col">
-                    <div class="card border-0 h-100 shadow-sm">
+                    <div class="card border-0 h-100 ">
 
                         <div class="rounded-pill bg-primary-subtle px-3 py-4 d-inline-flex align-items-center justify-content-center mx-auto mb-3 mt-3">
-                            <img src="../IMAGES/shield-check.svg" class="w-auto" alt="Viaja em seguranca" style="height: 24px;">
+                            <i class="bi bi-shield-check"></i>
                         </div>
                             
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Viaja em seguranca</h5>
+                            <h3 class="card-title fw-bold">Viaja em seguranca</h3>
                             <p class="card-text">Seguro incluido e apoio 24 horas, em portugues, onde quer que esteja.</p>
                         </div>
                     </div>
@@ -128,45 +133,405 @@
 
                 <!--Card 3-->
                 <div class="col">
-                    <div class="card border-0 h-100 shadow-sm">
+                    <div class="card border-0 h-100 ">
                         <div class="rounded-pill bg-primary-subtle px-3 py-4 d-inline-flex align-items-center justify-content-center mx-auto mb-3 mt-3">
-                            <img src="../IMAGES/calendar-check.svg" class="w-auto" alt="Datas flexiveis" style="height: 24px;">
+                            <i class="bi bi-calendar-check "></i>      
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Datas flexiveis</h5>
+                            <h3 class="card-title fw-bold">Datas flexiveis</h3>
                             <p class="card-text">Altera a data da viagem ate 15 dias antes, sem custos.</p>
                         </div>
                     </div>
                 </div>
                 
             </div>    
-            
+
         </div>    
     </section>
 
     <!--Carrossel de imagens-->
-    <section class="container my-5">
-        <div id="carroselImagens" class="carousel slide" data-bs-ride="carousel">
+    <!--Carousel-inner agrupa os slides. Carousel-item representa cada imagem. Active identifica o slide apresentado inicialmente. Data-bs-ride permite a reprodução automática.-->
+    <section id="destinos" class="container-fluid bg-light py-5">
+        <div class="container">
+            <div id="carroselImagens" class="carousel slide" data-bs-ride="carousel">
 
-            <div class="carousel-inner rounded shadow-sm">
+                <div class="carousel-inner rounded shadow-sm">
 
-                <div class="carousel-item active">
-                    <img src="../IMAGES/carroselEuropa.jpg" class="d-block w-100" alt="Europa">
+                    <div class="carousel-item active">
+                        <img src="../IMAGES/carrosselItalia.jpg" class="d-block w-100" alt="Itália">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../IMAGES/carrosselEspanha.jpg" class="d-block w-100" alt="Espanha">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../IMAGES/carrosselInglaterra.jpg" class="d-block w-100" alt="Inglaterra">
+                    </div>
+
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carroselImagens" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carroselImagens" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Seguinte</span>
+                </button>
+            </div> 
+        </div>   
+    </section>
+
+    <!--Seção de planos-->
+    <section id="planos" class="container py-5">
+
+        <h2 class="text-center  mb-4">
+            Os nossos planos
+        </h2>
+
+        <!--Cards com os planos-->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!--Card-Essencial-->
+            <div class="col">
+                <div class="card h-100 border text-center">
+
+                    <div class="card-header">
+                        Essencial
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h3 class="card-title">199 €</h3>
+
+                        <p class="card-text">
+                            por pessoa
+                        </p>
+
+                        <p class="card-text">
+                            Voos e alojamento<br>
+                            Seguro de viagem<br>
+                            Apoio por email
+                        </p>
+
+                        <a href="#reservar" class="btn btn-outline-primary mt-auto">
+                            Escolher
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Card-Família-->
+            <div class="col">
+
+                <div class="card h-100 border border-primary text-center">
+                    <div class="card-header bg-primary text-white">
+                        Família (mais popular)
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h3 class="card-title">349 €</h3>
+
+                        <p class="card-text">
+                            por pessoa
+                        </p>
+
+                        <p class="card-text">
+                            Tudo do Essencial<br>
+                            Transfers incluídos<br>
+                            Atividades para crianças<br>
+                            Apoio 24 horas
+                        </p>
+
+                        <a href="#reservar" class="btn btn-primary mt-auto">
+                            Escolher
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Card-Premium-->
+            <div class="col">
+                <div class="card h-100 border text-center">
+
+                    <div class="card-header">
+                        Premium
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h3 class="card-title">599 €</h3>
+
+                        <p class="card-text">
+                            por pessoa
+                        </p>
+
+                        <p class="card-text">
+                            Tudo da Família<br>
+                            Hotéis de 5 estrelas<br>
+                            Guia privado<br>
+                            Cancelamento flexível
+                        </p>
+
+                        <a href="#reservar" class="btn btn-outline-primary mt-auto">
+                            Escolher
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Perguntas Frequentes -->
+    <section id="perguntas" class="container-fluid bg-light py-5">
+
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+
+                <h2 class="text-center  mb-4">
+                    Perguntas Frequentes
+                </h2>
+
+                <!--Accordion: data-bs-toggle ativa o comportamento de abrir/fechar. data-bs-target identifica a resposta correspondente. data-bs-parent permite manter apenas uma resposta aberta.-->
+                <div class="accordion" id="faqAccordion">
+
+                    <!--Pergunta 1-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta1">
+                                Posso pagar em prestações?
+                            </button>
+                        </h2>
+
+                        <div id="pergunta1" class="accordion-collapse collapse show"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim. Dividimos o valor em até 6 prestações sem juros.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pergunta 2-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta2">
+                                O que acontece se eu precisar de cancelar?
+                            </button>
+                        </h2>
+
+                        <div id="pergunta2" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                As condições de alteração ou cancelamento
+                                dependem do destino e do tipo de reserva.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pergunta 3-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta3">
+                                As crianças pagam o mesmo?
+                            </button>
+                        </h2>
+
+                        <div id="pergunta3" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Depende do pacote escolhido. Consulta os detalhes
+                                de cada viagem para conhecer o que está incluído.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Formulário de proposta -->
+     <!--row organiza os campos em grelha. col-md-6 coloca dois campos lado a lado a partir do breakpoint md. col-12 ocupa toda a largura disponível. required define campos obrigatórios.-->
+    <section id="reservar" class="container-fluid py-5">
+
+        <div class="container">
+
+            <h2 class="text-center  mb-4">
+                Peça uma proposta
+            </h2>
+
+            <div class="col-lg-8 mx-auto">
+
+                <form>
+
+                    <div class="row g-3">
+
+                        <!--Nome-->
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control"
+                                id="nome" name="nome" required>
+                        </div>
+
+                        <!--Email-->
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control"
+                                id="email" name="email" required>
+                        </div>
+
+                        <!--Destino-->
+                        <div class="col-md-6">
+                            <label for="destino" class="form-label">Destino</label>
+
+                            <select class="form-select" id="destino" name="destino" required>
+                                <option value="Itália">Itália</option>
+                                <option value="Espanha">Espanha</option>
+                                <option value="Inglaterra">Inglaterra</option>
+                            </select>
+                        </div>
+
+                        <!--Número de pessoas-->
+                        <div class="col-md-6">
+                            <label for="pessoas" class="form-label">Número de pessoas</label>
+                            <input type="number" class="form-control"
+                                id="pessoas" name="pessoas" min="1" required>
+                        </div>
+
+                        <!--Mensagem-->
+                        <div class="col-12">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem"
+                                name="mensagem" rows="4"></textarea>
+                        </div>
+
+                        <!--Consentimento-->
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox"
+                                    id="consentimento" name="consentimento" value="sim" required>
+                                <label class="form-check-label" for="consentimento">
+                                    Aceito ser contactado(a) com a proposta
+                                </label>
+                            </div>
+                        </div>
+
+                        <!--Botão-->
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary w-100">
+                                Enviar pedido
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
 
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carroselImagens" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carroselImagens" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Seguinte</span>
-            </button>
-        </div>    
+        </div>
+
     </section>
+
+    <!--Footer: justify-content-between distribui o espaço livre entre as colunas. input-group agrupa o ícone, o campo de email e o botão. gap-3 define o espaçamento entre os ícones sociais.-->
+    <footer class="container-fluid bg-dark text-white py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-between g-4">
+
+            <!-- Logo -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="#" class="navbar-brand fw-bold text-white">
+                    <i class="bi bi-airplane me-2"></i>
+                    CESAE viagens
+                </a>
+
+                <p class="text-white-50 mt-1">
+                    Viagens à medida desde 2010.
+                </p>
+            </div>
+
+            <!-- Ligações -->
+            <div class="col-6 col-md-6 col-lg-2">
+                <h5 class="fw-bold mb-3">Ligações</h5>
+
+                <ul class="list-unstyled">
+                    <li class="mb-1"><a href="#planos" class="text-white-50 text-decoration-none">Planos</a></li>
+                    <li class="mb-1"><a href="#perguntas" class="text-white-50 text-decoration-none">Perguntas frequentes</a></li>
+                    <li class="mb-1"><a href="#contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-12 col-lg-4">
+                <h5 class="fw-bold mb-3">Newsletter</h5>
+
+                <form>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="bi bi-envelope text-secondary"></i>
+                        </span>
+
+                        <input type="email" class="form-control"
+                            placeholder="O seu email" required>
+
+                        <button class="btn btn-warning fw-bold" type="submit">
+                            Subscrever
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-4">
+
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" class="text-white fs-4" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="text-white fs-4" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <p class="text-center text-white-50 mb-0">
+            © 2026 CESAE Viagens
+        </p>
+
+        </div>
+
+    </footer>
 
     <!--Linka o JavaScript pro funcionamento do dropdown-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
