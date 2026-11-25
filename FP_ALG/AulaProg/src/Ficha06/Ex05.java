@@ -23,7 +23,7 @@ public class Ex05 {
 
     /**
      * Função que lê um vetor de inteiros, de um determinado tamanho, com valores do utilizador
-     * @param tamanhoVetorvetor Tamanho do vetor a ser lido
+     * @param tamanhoVetor Tamanho do vetor a ser lido
      * @return Vetor preenchido com números inteiros
      */
     public static int[] lerVetorInteiros(int tamanhoVetor){
